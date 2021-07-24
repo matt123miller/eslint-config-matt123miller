@@ -1,6 +1,6 @@
 module.exports = {
-extends: ['airbnb', 'prettier', 'prettier/react'],
-parser: 'babel-eslint',
+  extends: ['airbnb', 'eslint:recommended', 'prettier', 'prettier/react'],
+  parser: 'babel-eslint',
   parserOptions: {
     ecmaVersion: 2020,
     // Can I remove these now?

@@ -20,12 +20,7 @@ module.exports = {
     'no-alert': 0,
     'no-await-in-loop': 0,
     'no-return-assign': ['error', 'except-parens'],
-    'no-restricted-syntax': [
-      2,
-      'ForInStatement',
-      'LabeledStatement',
-      'WithStatement',
-    ],
+    'no-restricted-syntax': [2, 'ForInStatement', 'LabeledStatement', 'WithStatement'],
     'no-unused-vars': [
       1,
       {
@@ -69,11 +64,11 @@ module.exports = {
     'react/forbid-prop-types': 0,
     'react/no-unescaped-entities': 0,
     'jsx-a11y/accessible-emoji': 0,
-    "jsx-a11y/label-has-associated-control": [
-      "error",
+    'jsx-a11y/label-has-associated-control': [
+      'error',
       {
-        "assert": "either"
-      }
+        assert: 'either',
+      },
     ],
     'react/require-default-props': 0,
     'react/jsx-filename-extension': [
@@ -104,7 +99,7 @@ module.exports = {
         trailingComma: 'es5',
         singleQuote: true,
         printWidth: 80,
-        //below line only for windows users facing CLRF and eslint/prettier error
+        // below line only for windows users facing CLRF and eslint/prettier error
         // non windows users feel free to delete it
         endOfLine: 'auto',
       },

@@ -17,7 +17,7 @@ You can optionally add `--preview` as well to check what will happen.
 - Lints + Fixes inside of html script tags
 - Lints + Fixes React via eslint-config-airbnb
 
-## Installing
+## Per Project Installing - Recommended
 
 I prefer to install this locally once per project, that way you can have project specific settings as well using this config as the default. This works with any text editor and shell but I personally use VSCode so I reference that.
 
@@ -55,6 +55,12 @@ Tip: You can alternatively put this object in your `package.json` under the prop
 ```
 
 7. Now you can manually lint your code by running `npm run lint` and fix all fixable issues with `npm run lint:fix`. You probably want your editor to do this though.
+
+## Updating the Per Project Install
+
+Rerun the install command in your project to grab the latest version.
+
+`npx install-peerdeps --dev eslint-config-matt123miller`
 
 ## Global Install
 

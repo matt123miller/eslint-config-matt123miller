@@ -33,6 +33,7 @@ module.exports = {
         argsIgnorePattern: 'res|next|^err',
       },
     ],
+    'no-use-before-define': ['error', 'nofunc'],
     'prefer-const': [
       'error',
       {
@@ -69,6 +70,7 @@ module.exports = {
     'react/prefer-stateless-function': 0,
     'react/forbid-prop-types': 0,
     'react/no-unescaped-entities': 0,
+    'react/jsx-props-no-spreading': ['warn'],
     'jsx-a11y/accessible-emoji': 0,
     'jsx-a11y/label-has-associated-control': [
       'error',

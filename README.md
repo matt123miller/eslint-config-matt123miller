@@ -2,6 +2,14 @@
 
 These are my settings for [ESLint](https://eslint.org/) and [Prettier](https://prettier.io/), including support for [TypeScript](https://www.typescriptlang.org/). Originally based on the [repo from Wes Bos](https://github.com/wesbos/eslint-config-wesbos) but forging my own path 🚀.
 
+## Publishing changes
+
+Ensure `np` is installed globally
+
+`np --no-yarn --no-tests`
+
+You can optionally add `--preview` as well to check what will happen.
+
 ## What it does
 
 - Lints JavaScript based on the latest standards

@@ -2,6 +2,8 @@
 
 These are my settings for [ESLint](https://eslint.org/) and [Prettier](https://prettier.io/), including support for [TypeScript](https://www.typescriptlang.org/). Originally based on the [repo from Wes Bos](https://github.com/wesbos/eslint-config-wesbos) but forging my own path 🚀.
 
+This also includes optional suggestions for adding TypeScript linting.
+
 ## Publishing changes
 
 Ensure `np` is installed globally
@@ -55,6 +57,32 @@ Tip: You can alternatively put this object in your `package.json` under the prop
 ```
 
 7. Now you can manually lint your code by running `npm run lint` and fix all fixable issues with `npm run lint:fix`. You probably want your editor to do this though.
+
+### Optiona TypeScript Support
+
+1. Install additiona dev dependencies in your project.
+
+```
+npm i --save-dev @typescript-eslint/eslint-plugin @typescript-eslint/parser
+```
+
+2. Alter your `.eslintrc.js` to include extra support for the new packages.
+
+```json
+module.exports = {
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "sourceType": "module",
+    "project": "./tsconfig.json",
+  },
+  "extends": [
+    "matt123miller",
+    "plugin:@typescript-eslint/recommended", // Add the default recommendations @typescript-eslint/eslint-plugin
+    "prettier/@typescript-eslint", // Add prettier settings to avoid rules conflicts @typescript-eslint/eslint-plugin
+    "plugin:prettier/recommended", // Add prettier plugin
+  ],
+};
+```
 
 ## Updating the Per Project Install
 
@@ -145,7 +173,8 @@ It should just work, but if they aren't showing up in your package.json, try `np
 Start fresh. Sometimes global modules can goof you up. This will remove them all:
 
 ```
-npm uninstall eslint-config-matt123miller babel-eslint eslint eslint-config-prettier eslint-config-airbnb eslint-plugin-html eslint-plugin-prettier eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react prettier eslint-plugin-react-hooks
+npm uninstall @babel/eslint-parser eslint-config-matt123miller
+ eslint eslint-config-prettier eslint-config-airbnb eslint-plugin-html eslint-plugin-prettier eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react prettier eslint-plugin-react-hooks
 ```
 
 > To do the above a global install add the `--global` flag.

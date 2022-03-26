@@ -1,6 +1,6 @@
 module.exports = {
   extends: ['airbnb', 'eslint:recommended', 'prettier', 'prettier/react'],
-  parser: 'babel-eslint',
+  parser: '@babel/eslint-parser',
   parserOptions: {
     ecmaVersion: 2020,
     // Can I remove these now?
@@ -102,9 +102,11 @@ module.exports = {
     'prettier/prettier': [
       'error',
       {
+        tabWidth: 2,
+        semi: true,
         trailingComma: 'es5',
         singleQuote: true,
-        printWidth: 80,
+        printWidth: 120,
         // below line only for windows users facing CLRF and eslint/prettier error
         // non windows users feel free to delete it
         endOfLine: 'auto',

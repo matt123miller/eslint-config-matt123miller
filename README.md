@@ -37,19 +37,17 @@ npx install-peerdeps --dev eslint-config-matt123miller
 
 5. Create a `.eslintrc.js` file in the root of your project's directory (it should live where package.json does). Your `.eslintrc.js` file should look like this:
 
-```json
+```js
 module.exports = {
-  "extends": [
-    "matt123miller"
-  ]
-}
+  extends: ['matt123miller'],
+};
 ```
 
 Tip: You can alternatively put this object in your `package.json` under the property `"eslintConfig":`. This makes one less file in your project.
 
 6. You can add two scripts to your package.json to lint and/or fix:
 
-```json
+```js
 "scripts": {
   "lint": "eslint .",
   "lint:fix": "eslint . --fix"
@@ -68,18 +66,18 @@ npm i --save-dev @typescript-eslint/eslint-plugin @typescript-eslint/parser
 
 2. Alter your `.eslintrc.js` to include extra support for the new packages.
 
-```json
+```js
 module.exports = {
-  "parser": "@typescript-eslint/parser",
-  "parserOptions": {
-    "sourceType": "module",
-    "project": "./tsconfig.json",
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    sourceType: 'module',
+    project: './tsconfig.json',
   },
-  "extends": [
-    "matt123miller",
-    "plugin:@typescript-eslint/recommended", // Add the default recommendations @typescript-eslint/eslint-plugin
-    "prettier/@typescript-eslint", // Add prettier settings to avoid rules conflicts @typescript-eslint/eslint-plugin
-    "plugin:prettier/recommended", // Add prettier plugin
+  extends: [
+    'matt123miller',
+    'plugin:@typescript-eslint/recommended', // Add the default recommendations @typescript-eslint/eslint-plugin
+    'prettier/@typescript-eslint', // Add prettier settings to avoid rules conflicts @typescript-eslint/eslint-plugin
+    'plugin:prettier/recommended', // Add prettier plugin
   ],
 };
 ```

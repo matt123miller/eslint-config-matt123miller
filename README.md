@@ -1,5 +1,9 @@
 # No-Sweat™ Eslint and Prettier Setup
 
+## TLDR;
+
+`npx install-peerdeps --dev eslint-config-matt123miller`
+
 These are my settings for [ESLint](https://eslint.org/) and [Prettier](https://prettier.io/), including support for [TypeScript](https://www.typescriptlang.org/). Originally based on the [repo from Wes Bos](https://github.com/wesbos/eslint-config-wesbos) but forging my own path 🚀.
 
 This also includes optional suggestions for adding TypeScript linting.

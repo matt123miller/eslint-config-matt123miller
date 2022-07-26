@@ -12,7 +12,7 @@ This also includes optional suggestions for adding TypeScript linting.
 
 Ensure `np` is installed globally
 
-`np --no-yarn --no-tests`
+`npx np --no-yarn --no-tests`
 
 You can optionally add `--preview` as well to check what will happen.
 

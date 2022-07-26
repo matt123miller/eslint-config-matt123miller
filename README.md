@@ -39,15 +39,32 @@ npx install-peerdeps --dev eslint-config-matt123miller
 
 4. You can see in your package.json there are now a big list of devDependencies.
 
-5. Create a `.eslintrc.js` file in the root of your project's directory (it should live where package.json does). Your `.eslintrc.js` file should look like this:
+5. Create 2 files in the root of your project's directory (it should live where package.json does) named `.prettierrc.js` and `.eslintrc.js`. You can run the following 2 commands to create them.
 
 ```js
+cat > .eslintrc.js << EOF
 module.exports = {
   extends: ['matt123miller'],
 };
+EOF
 ```
 
-Tip: You can alternatively put this object in your `package.json` under the property `"eslintConfig":`. This makes one less file in your project.
+and
+
+```js
+cat > .prettierrc.js << EOF
+module.exports = {
+  semi: true,
+  trailingComma: 'es5',
+  singleQuote: true,
+  printWidth: 100,
+  endOfLine: 'lf',
+  tabWidth: 2,
+};
+EOF
+```
+
+Tip: You can alternatively put this object in your `package.json`. Read the docs for both prettier and eslint for examples.
 
 6. You can add two scripts to your package.json to lint and/or fix:
 
@@ -85,6 +102,8 @@ module.exports = {
   ],
 };
 ```
+
+Then install the now missing packages `npm i -D plugin:@typescript-eslint prettier/@typescript-eslint plugin:prettier`
 
 ## Updating the Per Project Install
 
